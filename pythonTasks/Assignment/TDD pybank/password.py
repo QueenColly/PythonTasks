@@ -1,15 +1,16 @@
+
 def validate_email(email):
     
-    if len(email) < 8:
-        return "Email is too short"
+    # Rule 1: must be exactly 8 characters
+    if len(email) != 8:
+        return False
 
-    if email[0] == '@' or email[-1] == '@' :
-        return "Email is wrong"
-
+    # Rule 2: must contain '@'
     if '@' not in email:
-        return "Email is wrong"
+        return False
 
-    return "Email is valid"
-    
-    
+    # Rule 3: must not start or end with '@'
+    if email[0] == '@' or email[-1] == '@':
+        return False
 
+    return True

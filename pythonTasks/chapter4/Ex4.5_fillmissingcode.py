@@ -1,0 +1,11 @@
+#Exercise 4.5 Fill in the Missing Code
+
+def seconds_since_midnight(hours, minutes, seconds):
+    hour_in_seconds = hours * 3600
+    minute_in_seconds = minutes * 60
+    return hour_in_seconds + minute_in_seconds + seconds
+
+# Test
+print(seconds_since_midnight(13, 30, 45)) 
+
+#The Output is: 48645
